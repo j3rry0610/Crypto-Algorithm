@@ -254,13 +254,13 @@ static void des(const unsigned char *source, unsigned char *target, const unsign
     return;
 }
 
-void des_encipher(const unsigned char *plain, unsigned char *cipher, const unsigned char *key)
+void des_encrypt(const unsigned char *plain, unsigned char *cipher, const unsigned char *key)
 {
     des(plain, cipher, key, encipher);
     return;
 }
 
-void des_decipher(const unsigned char *cipher, unsigned char *plain, const unsigned char *key)
+void des_decrypt(const unsigned char *cipher, unsigned char *plain, const unsigned char *key)
 {
     des(cipher, plain, key, decipher);
     return;

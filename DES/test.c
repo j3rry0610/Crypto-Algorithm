@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "des.h"
 
 int main(){
@@ -11,8 +10,8 @@ int main(){
         key[i] = 0x0f;
     }
     printf("start\n");
-    des_encipher(plain, cipher, key);
-    des_decipher(cipher, plain, key);
+    des_encrypt(plain, cipher, key);
+    des_decrypt(cipher, plain, key);
     for(int i = 0;i < 8; i++){
         printf("%x %x\n", cipher[i], plain[i]);
     }
